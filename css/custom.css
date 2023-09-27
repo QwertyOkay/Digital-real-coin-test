@@ -49,10 +49,13 @@ button[type="submit"] {
 
 .testimonial {
   max-width: 400px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+.testimonial:last-child {
+  margin-bottom: 0px;
 }
 
 .testimonial img {
@@ -1943,4 +1946,14 @@ html.glb-feat-nextArticleV4--st-2 .auto-next-materia {
 
 #barra-item-login {
   display: none !important;
+}
+
+.custom__pdForm {
+  padding: 20px 0px 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .custom__pdForm {
+    padding: 90px 0px 20px;
+  }
 }
