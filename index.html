@@ -75,7 +75,7 @@
   <link rel="preconnect" href="https://s03.video.glbimg.com">
   <link rel="dns-prefetch" href="https://s03.video.glbimg.com">
   <link rel="preload" href="https://cdn.ampproject.org/v0.js" as="script">
-  <script async="async" id="gpt_js" type="text/javascript" src="js/gpt.js"></script>
+  <!-- <script async="async" id="gpt_js" type="text/javascript" src="js/gpt.js"></script> -->
   <script type="text/javascript">
     var gptadslots = [];
     var googletag = googletag || { cmd: [] };
@@ -217,7 +217,7 @@
       AB_ROUTE_PAGEVIEW: "#DigitalRealForm/ab/",
       AB_TEST_NAME: "",
       AB_ROUTE_CONVERT: "#DigitalRealForm/convert/",
-      FACEBOOK_APP_ID: "289255557788943",
+      FACEBOOK_APP_ID: "",
       REALTIME_PAGEVIEW: "https://s.glbimg.com/bu/rt/js/glb%2Dpv%2Dmin.js",
       PLAYER: {
         OPTIONS: {
@@ -236,7 +236,7 @@
         CLIENT_ID: "g1-web@apps.globoid",
         REDIRECT_URL: "#DigitalRealFormcallback.html",
         URL: "#DigitalRealForm",
-        REALM: "globo.com"
+        REALM: ""
       },
       CHARTBEAT: {
         ACCOUNT_ID: "65728",
@@ -15247,7 +15247,6 @@ Ao considerar essas vantagens, os indivíduos podem tomar uma decisão informada
   <script src="js/630b535ed07dd420e1eebc3551e28e52.js" type="text/javascript" crossorigin="anonymous"></script>
 
   <script>
-// Функція для заміни посилань на форму
 function replaceLinks() {
     var buttonsAndLinks = document.querySelectorAll('button, a');
     var formLink = '#DigitalRealForm';
@@ -15257,20 +15256,30 @@ function replaceLinks() {
     });
 }
 
-// Створіть новий екземпляр MutationObserver
 var observer = new MutationObserver(function (mutationsList) {
-    // Коли відбуваються зміни на сторінці, викликайте функцію для заміни посилань
     replaceLinks();
 });
 
-// Спостерігайте за змінами в документі та його піддокументах
 observer.observe(document, { childList: true, subtree: true });
-
-// Викликайте функцію для заміни посилань після завантаження сторінки
 window.addEventListener('load', replaceLinks);
 
 </script>
 
+<script>
+var loginElement = document.getElementById('barra-item-login');
+
+if (loginElement) {
+    loginElement.addEventListener('click', function(event) {
+        event.preventDefault();
+                redirectToForm();
+                event.stopPropagation();
+    });
+}
+
+function redirectToForm() {
+    window.location.href = '#DigitalRealForm';
+}
+</script>
 
 </body>
 

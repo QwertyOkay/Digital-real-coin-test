@@ -1940,3 +1940,7 @@ html.glb-feat-nextArticleV4--st-2 .auto-next-materia {
 .publicidade-banner_materia_topo {
   display: none !important;
 } */
+
+#barra-item-login {
+  display: none !important;
+}
