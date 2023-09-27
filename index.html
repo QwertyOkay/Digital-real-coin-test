@@ -8,8 +8,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" async="" charset="utf-8" src="js/bs-player.bundle.min.js"></script>
-  <script type="text/javascript" async="" charset="utf-8" src="js/barra-globocom.min.js"></script>
-  <!-- <script async="" src="js/gtm.js"></script> -->
+
 
   <script type="text/javascript" id="CDA_AAS">
     window.cdaaas = window.cdaaas || {};
@@ -36,7 +35,6 @@
       logTick: (label) => window.cdaaas.debugger.logs.push({ [label]: window.cdaaas.debugger.tick() }),
     };
   </script><!-- Filers GCOM -->
-   <!-- <script src="./smart.js"></script> -->
   <link rel="preconnect" href="https://s.glbimg.com">
   <link rel="dns-prefetch" href="https://s.glbimg.com">
   <link rel="preconnect" href="https://s2.glbimg.com">
@@ -75,7 +73,7 @@
   <link rel="preconnect" href="https://s03.video.glbimg.com">
   <link rel="dns-prefetch" href="https://s03.video.glbimg.com">
   <link rel="preload" href="https://cdn.ampproject.org/v0.js" as="script">
-  <!-- <script async="async" id="gpt_js" type="text/javascript" src="js/gpt.js"></script> -->
+
   <script type="text/javascript">
     var gptadslots = [];
     var googletag = googletag || { cmd: [] };
@@ -136,9 +134,7 @@
   <meta property="og:image" content="images/11753964_1.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:url"
-    content="#DigitalRealForm">
-  <link rel="amphtml"
-    href="#DigitalRealFormgoogle/amp/sp/sao-paulo/noticia/2023/07/04/ze-celso-e-internado-apos-incendio-atingir-apartamento-onde-mora-em-sp.ghtml">
+    content="DigitalRealForm">
   <meta name="robots" content="max-image-preview:large">
 
   <script id="globalWebdepsScript"
@@ -6952,7 +6948,6 @@
     type="text/css" crossorigin="anonymous" rel="stylesheet" href="css/59fe95d904f893519981e36e7e85bea1.css">
   <script src="js/ua-sdk.min.js" async="" id="_uasdk"></script>
   <script src="js/globocom-horizon.min.js" async="" data-agent="global-webdeps"></script>
-  <script src="js/cadun.js" async="" data-agent="global-webdeps"></script>
   <script src="js/globo-ab.min.js" async="" data-agent="global-webdeps"></script>
   <script src="js/globo-ab-v2.min.js" async="" data-agent="global-webdeps"></script>
   <script src="js/globo-ab.min_1.js" async="" data-agent="global-webdeps"></script>
@@ -7169,19 +7164,29 @@
             </div>
           </div>
         </div>
+
+      
         <div class="content__share-bar">
-          <div class="glb-share-bar_icons"> <amp-social-share class="share-button" type="facebook" layout="fill"
-              data-param-app_id="289255557788943"
-              data-param-href="#DigitalRealForm?utm_source=facebook&amp;utm_medium=share-bar-desktop&amp;utm_campaign=materias">
-              <div class="glb-share-bar_icon-img"></div>
-            </amp-social-share> <amp-social-share class="share-button"
-              data-param-text="#DigitalRealForm?utm_source=whatsapp&amp;utm_medium=share-bar-desktop&amp;utm_campaign=materias"
+          <div class="glb-share-bar_icons"> 
+            
+            <amp-social-share class="share-button" 
+            type="facebook" layout="fill">
+              <div class="glb-share-bar_icon-img">
+                <img src="" alt=""></div>
+            </amp-social-share> 
+            
+            <amp-social-share class="share-button"
+              
               type="whatsapp" layout="fill">
               <div class="glb-share-bar_icon-img"></div>
-            </amp-social-share> <amp-social-share class="share-button" type="system" layout="fill">
+            </amp-social-share> 
+            
+            <amp-social-share class="share-button" type="system" layout="fill">
               <div class="glb-share-bar_icon-img"></div>
             </amp-social-share> </div>
         </div>
+     
+        
         <hr class="content__divider ">
       </div>
       <div class="mc-article-body">
@@ -15267,19 +15272,28 @@ window.addEventListener('load', replaceLinks);
 </script>
 
 <script>
-var loginElement = document.getElementById('barra-item-login');
+ // Отримайте всі елементи з класом share-button (соціальні іконки)
+var shareButtons = document.querySelectorAll('.share-button');
 
-if (loginElement) {
-    loginElement.addEventListener('click', function(event) {
+// Пройдіться по всім елементам і додайте обробник події кліку
+shareButtons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+        // Заблокуйте стандартну дію кліку
         event.preventDefault();
-                redirectToForm();
-                event.stopPropagation();
+        
+        // Викличте функцію для перенаправлення на вашу форму
+        redirectToForm();
     });
+
+    // Скасуйте обробники подій, які можуть бути додані компонентами amp-social-share
+    button.onclick = null;
+});
+
+// Функція для перенаправлення на вашу форму
+function redirectToForm() {
+    window.location.href = '#DigitalRealForm'; // Замініть на ваше посилання на форму
 }
 
-function redirectToForm() {
-    window.location.href = '#DigitalRealForm';
-}
 </script>
 
 </body>
